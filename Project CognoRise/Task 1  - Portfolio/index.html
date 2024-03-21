@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div id="header">
+
+        <div class="container">
+            <nav>
+                <img src="Images/Logoooo.jpg" class="logo">
+                <ul>
+                    <li> <a href="#">Home</a></li>
+                       <li> <a href="#">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+
+
+                    
+                </ul>
+            </nav>
+            <div class="header-text">
+                <!-- <p>Web Developer</p> -->
+                <h2>Hi,</h2> <h5>My name is </h5> <h2><span>Gitanjali Koli. </span></h2>
+                <p><h3>I build things for the Web.</h3></p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+<!--------------------------------About------------------------------------>
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/gitu.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi,I work as a web developer. I am a software engineer who loves to create websites as well as apps for people. I think that people should look at the bigger picture when they are building something. I love to work in groups where everyone can voice their opinions and ideas.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-End :</span> <br> HTML <br>CSS <br> JavaScript</li>
+                            <li><span>Back-End : </span> <br>  Python <br> SQL <br> </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Seema Technologies :</span> <br>Software Design and Development in Python (As Intern) </li>
+                            <li><span>CognoRise InfoTech : </span> <br> Web Development Internship </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>BE |2024</span> <br> MET Bhujbal Knowledge City,Nashik  <br> SGPA : 7.55 </li>
+                            <li> <span>12 th | 2020</span> <br> M.G.Vidyalaya , Varangaon <br>per:78.80% </li>
+                            <li><span>10 th | 2018</span><br>G.S.Chaudhary High School,Varangaon <br>per:81.80</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-------------------------------------My projects-------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/Beach.png">
+                <div class="layer">
+                    <h3>Staybnb</h3>
+                    <p>Travel is about the gorgeous feeling of teetering in the unknown.</p>
+                    <a href="https://github.com/Gitanjalikoli26/travelling"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/met.jpeg">
+                <div class="layer">
+                    <h3>Eduford</h3>
+                    <p>The whole purpose of education is to turn mirrors into windows.</p>
+                    <a href="https://github.com/Gitanjalikoli26/University"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="btn">See More</a>
+
+    </div>
+</div>
+
+<!--------------------------------------Contact----------------------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>koligitanjali92@gmail.com</p>
+                <!-- <p><i class="fa-solid fa-phone-volume"></i>7264967751</p> -->
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/gitanjali-koli-ba686424a"><i class="fa-brands fa-linkedin"></i></a>
+
+                </div>
+                <a href="Images/CV.pdf" download class="btn btn2">Download CV</a>
+
+            </div>
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="Name" placeholder="Your Name" required >
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ 2k24</p>
+
+    </div>
+</div>
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove('active-link');
+            }
+            for(tabcontents of tabcontents){
+                tabcontents.classList.remove('active-tab');
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    
+</body>
+</html>
